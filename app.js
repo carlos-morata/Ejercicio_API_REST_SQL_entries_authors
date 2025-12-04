@@ -18,6 +18,10 @@ app.use(morgan(':method :url :status :param[id] - :response-time ms :body'));
 const entriesRoutes = require('./routes/entries.routes');
 app.use('/api/entries', entriesRoutes);
 
+// Rutas Authors
+const authorsRoutes = require('./routes/author.routes.js');
+app.use('/api/authors', authorsRoutes)
+
 app.use(error404);
 
 // Iniciar Servidor
